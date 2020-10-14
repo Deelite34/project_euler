@@ -1,4 +1,4 @@
-# project_euler
+# project_euler in python
 
 
 I'm using https://projecteuler.net/
