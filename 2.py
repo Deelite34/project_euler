@@ -53,4 +53,4 @@ unittest.main(exit=False)
 task = Fibonacci()
 
 # any high number other than 99 will do, program stops when it detects fib sequence number > 4000000
-print(task.sum_of_evens(99))   
+print(task.sum_of_evens(99))
