@@ -25,6 +25,7 @@ class LargestPrimeFactors(unittest.TestCase):
         self.assertEqual(self.calculate(13195)[-1], 29)
 
 
-unittest.main(exit=False)
-largest_p_factor = LargestPrimeFactors()
-print(largest_p_factor.calculate(600851475143))
+if __name__ == '__main__':
+    unittest.main(exit=False)
+    largest_p_factor = LargestPrimeFactors()
+    print(largest_p_factor.calculate(600851475143))

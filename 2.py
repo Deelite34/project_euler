@@ -49,8 +49,8 @@ class Fibonacci(unittest.TestCase):
         self.assertEqual(self.sum_of_evens(8), real_result)
 
 
-unittest.main(exit=False)
-task = Fibonacci()
-
-# any high number other than 99 will do, program stops when it detects fib sequence number > 4000000
-print(task.sum_of_evens(99))
+if __name__ == '__main__':
+    unittest.main(exit=False)
+    task = Fibonacci()
+    # any high number other than 99 will do, program stops when it detects fib sequence number > 4000000
+    print(task.sum_of_evens(99))
