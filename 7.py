@@ -1,9 +1,16 @@
+from math import sqrt
+from math import ceil
+
+
 def is_prime(num):
     divisors = []
-    for i in range(1, num + 1):
+    if num % 2 == 0:
+        return False
+    for i in range(1, ceil(sqrt(num)) + 1 if num > 3 else num, 2):
         if num % i == 0:
             divisors.append(i)
-    if len(divisors) == 2 and 1 in divisors and i in divisors:
+    divisors.append(num)
+    if len(divisors) == 2:
         return(True)
     return(False)
 
@@ -16,19 +23,17 @@ def find_x_primes_range(start, end):
     return(result)
 
 
-def find_xth_prime(number):
-    result = []
+def find_primes_up_to_input(number):
+    result = [2]
     start_index = 1
-    end_index = 1000
+    end_index = 500
     while len(result) < number:
         result += find_x_primes_range(start_index, end_index)
-        start_index += 1000
-        end_index += 1000
+        start_index += 500
+        end_index += 500
     return(result)
 
 
-index = 1000
-
-print(find_xth_prime(index))
-print(find_xth_prime(index)[100])
-print(len(find_xth_prime(index)))
+index = 10000
+#print((find_primes_up_to_input(index)))
+print((find_primes_up_to_input(index)[10000]))
