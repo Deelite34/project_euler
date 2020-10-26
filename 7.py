@@ -35,5 +35,5 @@ def find_primes_up_to_input(number):
 
 
 index = 10000
-#print((find_primes_up_to_input(index)))
+# print((find_primes_up_to_input(index)))
 print((find_primes_up_to_input(index)[10000]))
