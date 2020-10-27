@@ -1,20 +1,21 @@
-"""
-2520 is the smallest number that can be divided by each 
-of the numbers from 1 to 10 without any remainder.
-
-What is the smallest positive number that is evenly divisible by
- all of the numbers from 1 to 20?
-"""
 
 
 class SmallestDivisibleNumber():
+    """
+    2520 is the smallest number that can be divided by each
+    of the numbers from 1 to 10 without any remainder.
+
+    What is the smallest positive number that is evenly divisible by
+     all of the numbers from 1 to 20?
+    """
+
     def calculate(self, taskrange, startnumber=10):
         multiplier = 1
         results = []
         while len(results) < 1:
-            # check if all elements of list containing Bools , that tell us
+            # check if all elements of list containing bools , that tell us
             # if startnumber * multiplier is divisible
-            # by numbers from 1 to taskrange are True
+            # by numbers from 1 to taskrange, are True
             if all([(startnumber * multiplier) % n == 0 for n in range(1, taskrange)]):
                 return(startnumber * multiplier)
             else:

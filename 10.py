@@ -1,14 +1,12 @@
 from math import sqrt
 from math import ceil
 
-"""
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
-
-Find the sum of all the primes below two million.
-"""
-
 
 class SummationOfPrimes():
+    """
+    The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+    Find the sum of all the primes below two million.
+    """
     def is_prime(self, num):
         divisors = []
         if num % 2 == 0:
@@ -16,7 +14,6 @@ class SummationOfPrimes():
         # check only neccesary divisors to speed up calculations
         # up to square root of number+1 (when possible)
         for i in range(1, ceil(sqrt(num)) + 1 if num > 3 else num, 2):
-            print(i)
             if num % i == 0:
                 divisors.append(i)
         divisors.append(num)
@@ -39,7 +36,7 @@ class SummationOfPrimes():
             result += self.find_x_primes_range(start_index, end_index)
             start_index += 5000
             end_index += 5000
-        for i in reversed(result): # Remove excesive elements from result list
+        for i in reversed(result):  # Remove excesive elements from result list
             if i > input:
                 result.remove(i)
             else:

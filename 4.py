@@ -1,13 +1,14 @@
 import unittest
-"""
-A palindromic number reads the same both ways.
-The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-
-Find the largest palindrome made from the product of two 3-digit numbers.
-"""
 
 
 class CheckPalindrome(unittest.TestCase):
+    """
+    A palindromic number reads the same both ways.
+    The largest palindrome made from the product of two 2-digit numbers is 
+    9009 = 91 × 99.
+
+    Find the largest palindrome made from the product of two 3-digit numbers.
+    """
 
     def __check_palindrome(self, input):
         helper = str(input)
