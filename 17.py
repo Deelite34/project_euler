@@ -52,9 +52,8 @@ class NumberLetterCounts():
             # counting from 0:
             # <0-th number> hundred
             self.result += self.num_to_words[int(str(input)[0])] + ' hundred'
-
-            
             second_and_third = int(str(input)[1:3])
+
             # If 1st and 2nd numbers are not 0 and 0, go here
             if second_and_third in self.num_to_words.keys() and second_and_third != 0:
                 # converts number on 1st and 2nd(counting from 0)
